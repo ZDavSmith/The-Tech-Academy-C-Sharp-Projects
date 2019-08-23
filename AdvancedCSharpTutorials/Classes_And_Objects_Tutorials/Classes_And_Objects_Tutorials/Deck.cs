@@ -29,5 +29,24 @@ namespace TwentyOne
 
         }
         public List<Card> Cards { get; set; } //Property
+        public void Shuffle(int times = 1) //method - public, accesible anywhere, static: dont want to create obj program before calling, Deck = type of data, Shuffle = name of function, (Deck deck) parameter of type Deck, variable name deck
+        {
+
+            for (int i = 0; i < times; i++)
+            {
+
+                List<Card> TempList = new List<Card>();
+                Random random = new Random(); //Random is a class from the framework we can call
+
+                while (Cards.Count > 0)
+                {
+                    int randomIndex = random.Next(0,Cards.Count); //min value of 0 and max value of 52
+                    TempList.Add(Cards[randomIndex]);
+                    this.Cards.RemoveAt(randomIndex); // deletes it from the temporary List
+                }
+                Cards = TempList;
+            }
+
+        }
     }
 }
