@@ -14,13 +14,22 @@ namespace TwentyOne
             //==============================
             //CREATING CLASSES AND OBJECTS
             //==============================
+
+
+
+            //==============================
+            //POLYMORPHISM DEMO
+            //==============================
+            //List<Game> games = new List<Game>();
+            //Game game = new TwentyOneGame(); //Polymorphism - one object (TwentyOneGame) can morph into that object
+            //games.Add(game);
+            //================================================================
+
+
             TwentyOneGame game = new TwentyOneGame();
-            game.Players = new List<string>() { "Jesse", "Bill", "Joe" };
+            game.Players = new List<string>() { "Jesse", "Daneiel", "Bill" };
             game.ListPlayers();
-            game.Play();
             Console.ReadLine();
-
-
 
             ////Creating the Deck and Shuffling it
             //Deck deck = new Deck();
