@@ -13,5 +13,7 @@ namespace Inheritance_Part_1
         {
             Console.WriteLine("Name: " + FirstName + " " + LastName);
         }
-    }
+
+
+     }
 }
