@@ -26,21 +26,28 @@ namespace TwentyOne
             //================================================================
 
 
-            TwentyOneGame game = new TwentyOneGame();
-            game.Players = new List<string>() { "Jesse", "Daneiel", "Bill" };
-            game.ListPlayers();
-            Console.ReadLine();
-
-            ////Creating the Deck and Shuffling it
-            //Deck deck = new Deck();
-            //deck.Shuffle(times: 3);
-
-            //foreach (Card card in deck.Cards)
-            //{
-            //    Console.WriteLine(card.Face + " of " + card.Suit);
-            //}
-            //Console.WriteLine(deck.Cards.Count);
+            //TwentyOneGame game = new TwentyOneGame();
+            //game.Players = new List<string>() { "Jesse", "Daneiel", "Bill" };
+            //game.ListPlayers();
             //Console.ReadLine();
+
+            //Creating the Deck and Shuffling it
+            Game game = new TwentyOneGame();
+            game.Players = new List<Player>(); //instantiating the List Player
+            Player player = new Player();
+            player.Name = "Zach";
+            game += player;
+            game -= player;
+
+            Deck deck = new Deck();
+            deck.Shuffle(times: 3);
+
+            foreach (Card card in deck.Cards)
+            {
+                Console.WriteLine(card.Face + " of " + card.Suit);
+            }
+            Console.WriteLine(deck.Cards.Count);
+            Console.ReadLine();
         }
 
 
