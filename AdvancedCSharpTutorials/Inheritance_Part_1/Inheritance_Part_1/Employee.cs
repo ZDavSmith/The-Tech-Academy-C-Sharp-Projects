@@ -4,8 +4,13 @@ using System.Text;
 
 namespace Inheritance_Part_1
 {
-    class Employee: Person
+    public class Employee: Person, IQuittable
     {
         public int Id { get; set; }
+
+        public void Quit()
+        { 
+         Console.WriteLine("I quit");           
+        }
     }
 }

@@ -11,6 +11,9 @@ namespace Inheritance_Part_1
             employee.LastName = "Student";
             employee.SayName();
 
+            IQuittable quittable = new Employee();
+            quittable.Quit();
+            
         }
     }
 }
