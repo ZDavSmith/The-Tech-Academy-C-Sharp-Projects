@@ -4,19 +4,24 @@ using System.Text;
 
 namespace Inheritance_Part_1
 {
-    public class Employee<T> : Person, IQuittable
+    public class Employee : Person, IQuittable
     {
         public int Id { get; set; }
-        public List<T> Things { get; set; }
-
+        public List<int> Things { get; set; }
         public void Quit()
         {
             Console.WriteLine("I quit");
         }
 
-        //===============
-        //HELP
-        //=================
+
+        public Employee(string FirstName, string LastName, int id)
+        {
+            this.FirstName = FirstName;
+            this.LastName = LastName;
+            Id = id;
+        }
+
+
         //public static bool operator ==(Employee employee, Employee employee2)
         //{
         //    bool sameId = false;

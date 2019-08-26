@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29201.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance_Part_1", "Inheritance_Part_1\Inheritance_Part_1.csproj", "{9EED795B-0EE3-4D71-B56C-FA37A9325F60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Employee Exercises", "Inheritance_Part_1\Employee Exercises.csproj", "{9EED795B-0EE3-4D71-B56C-FA37A9325F60}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

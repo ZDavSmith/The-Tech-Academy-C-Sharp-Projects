@@ -39,13 +39,24 @@ namespace TwentyOne
             //game += player;
             //game -= player;
 
-            Card card1 = new Card();
-            Card card2 = card1;
-            card1.Face = Face.Eight;
-            card2.Face = Face.King;
 
-            Console.WriteLine(card1.Face);
-            //Deck deck = new Deck();
+            Deck deck = new Deck();
+
+            //LAMDA FUNCTIONS
+
+            // int count = deck.Cards.Count(x => x.Face == Face.Ace); //x is all the elements in the deck we're counting. -- Where xFace == Face.Ace ( => means "Map this expression to each item")
+
+            // List<Card> newList = deck.Cards.Where(x => x.Face == Face.King).ToList(); //.Where is similar to an SQL Where. It creates a new list
+
+            List<int> numberList = new List<int>() { 1, 2, 3, 555, 342, 23 };
+            int sum = numberList.Sum(x => x + 5);
+            int sum2 = numberList.Max();
+            int sum3 = numberList.Min();
+            Console.WriteLine(sum + sum2 + sum3);
+
+
+
+
             //deck.Shuffle(times: 3);
 
             //foreach (Card card in deck.Cards)
