@@ -11,22 +11,17 @@ namespace TwentyOne
         public Deck() //Creating Constructor (Always at top of class and uses class name)
         {
             Cards = new List<Card>(); //Cards is reffering to a property of the class we created already (See Below)
-            List<string> Suits = new List<string>() { "Clubs", "Hearts", "Diamonds", "Spades" };
-            List<string> Faces = new List<string>() { "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King", "Ace" };
-            foreach (string face in Faces)
+
+            for (int i = 0; i < 13; i++)
             {
-                foreach (string suit in Suits)
+                for (int j = 0; j < 4; j++)
                 {
                     Card card = new Card();
-                    card.Suit = suit;
-                    card.Face = face;
+                    card.Face = (Face)i; //Casts Face to j
+                    card.Suit = (Suit)j;
                     Cards.Add(card);
                 }
             }
-
-
-
-
         }
         public List<Card> Cards { get; set; } //Property
         public void Shuffle(int times = 1) //method - public, accesible anywhere, static: dont want to create obj program before calling, Deck = type of data, Shuffle = name of function, (Deck deck) parameter of type Deck, variable name deck
@@ -46,7 +41,6 @@ namespace TwentyOne
                 }
                 Cards = TempList;
             }
-
         }
     }
 }

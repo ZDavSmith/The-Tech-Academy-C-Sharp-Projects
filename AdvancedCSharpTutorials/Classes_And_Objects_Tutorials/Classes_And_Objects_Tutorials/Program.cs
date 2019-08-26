@@ -32,12 +32,12 @@ namespace TwentyOne
             //Console.ReadLine();
 
             //Creating the Deck and Shuffling it
-            Game game = new TwentyOneGame();
-            game.Players = new List<Player>(); //instantiating the List Player
-            Player player = new Player();
-            player.Name = "Zach";
-            game += player;
-            game -= player;
+            //Game game = new TwentyOneGame();
+            //game.Players = new List<Player>(); //instantiating the List Player
+            //Player player = new Player();
+            //player.Name = "Zach";
+            //game += player;
+            //game -= player;
 
             Deck deck = new Deck();
             deck.Shuffle(times: 3);
@@ -49,7 +49,6 @@ namespace TwentyOne
             Console.WriteLine(deck.Cards.Count);
             Console.ReadLine();
         }
-
 
 
     }
