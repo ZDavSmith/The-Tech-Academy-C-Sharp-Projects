@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TwentyOne
+namespace Casino
 {
     public abstract class Game  //This class is abstract because an object will never be created from it. There will always be a type of game that inherits from the general type: Game
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 
-namespace TwentyOne
+namespace Casino.TwentyOne
 {
     public class TwentyOneRules
     {

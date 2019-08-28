@@ -4,10 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TwentyOne
+namespace Casino
 {
      public class Player
     {
+        public Player(string name) : this(name, 100) //Sets balance to 100 if one is not declared
+        {
+        }
         public Player(string name, int beginningBalance)
         {
             Hand = new List<Card>();
@@ -23,6 +26,7 @@ namespace TwentyOne
         public int Balance { get; set; }
         public string Name { get; set; }
         public bool isActivelyPlaying { get; set; }
+        public Guid Id { get; set; }
         public bool Stay { get; set; }
 
          

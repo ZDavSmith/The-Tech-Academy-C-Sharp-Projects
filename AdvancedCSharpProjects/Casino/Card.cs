@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TwentyOne
+namespace Casino
 {
     public struct Card //public lets it be accessable.. Also, valid struct type since we wouldn't want the value of the card to change
     {
