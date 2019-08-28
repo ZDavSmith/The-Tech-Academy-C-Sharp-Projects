@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.IO;
 
 namespace TwentyOne
 {
@@ -11,62 +11,35 @@ namespace TwentyOne
     {
         static void Main(string[] args)
         {
-            //==============================
-            //CREATING CLASSES AND OBJECTS
-            //==============================
+            //string text = "Here is some text";
+            //File.WriteAllText(@"C:\Users\Zachary\Logs\log.txt", text);
+            //string text = File.ReadAllText(@"C:\Users\Zachary\Logs\log.txt");
 
+            Console.WriteLine("Welcome to the Grand Hotel and Casino. Let's start by telling me your name.");
+            string playerName = Console.ReadLine();
 
+            Console.WriteLine("And how much money did you bring today?");
+            int bank = Convert.ToInt32(Console.ReadLine());
 
-            //==============================
-            //POLYMORPHISM DEMO
-            //==============================
-            //List<Game> games = new List<Game>();
-            //Game game = new TwentyOneGame(); //Polymorphism - one object (TwentyOneGame) can morph into that object
-            //games.Add(game);
-            //================================================================
+            Console.WriteLine("Hello, {0}. Would you like to join a game of 21 right now?", playerName);
+            string answer = Console.ReadLine().ToLower();
 
+            if (answer == "yes" || answer == "yeah" || answer == "y" || answer == "sure" || answer == "ya")
+            {
+                Player player = new Player(playerName, bank);
+                Game game = new TwentyOneGame();
+                game += player;
+                player.isActivelyPlaying = true;
+                while (player.isActivelyPlaying && player.Balance > 0)
+                {
+                    game.Play();
+                }
+                game -= player;
+                Console.WriteLine("Thank you for playing!");
+            }
 
-            //TwentyOneGame game = new TwentyOneGame();
-            //game.Players = new List<string>() { "Jesse", "Daneiel", "Bill" };
-            //game.ListPlayers();
-            //Console.ReadLine();
-
-            //Creating the Deck and Shuffling it
-            //Game game = new TwentyOneGame();
-            //game.Players = new List<Player>(); //instantiating the List Player
-            //Player player = new Player();
-            //player.Name = "Zach";
-            //game += player;
-            //game -= player;
-
-
-            Deck deck = new Deck();
-
-            //LAMDA FUNCTIONS
-
-            // int count = deck.Cards.Count(x => x.Face == Face.Ace); //x is all the elements in the deck we're counting. -- Where xFace == Face.Ace ( => means "Map this expression to each item")
-
-            // List<Card> newList = deck.Cards.Where(x => x.Face == Face.King).ToList(); //.Where is similar to an SQL Where. It creates a new list
-
-            List<int> numberList = new List<int>() { 1, 2, 3, 555, 342, 23 };
-            int sum = numberList.Sum(x => x + 5);
-            int sum2 = numberList.Max();
-            int sum3 = numberList.Min();
-            Console.WriteLine(sum + sum2 + sum3);
-
-
-
-
-            //deck.Shuffle(times: 3);
-
-            //foreach (Card card in deck.Cards)
-            //{
-            //    Console.WriteLine(card.Face + " of " + card.Suit);
-            //}
-            //Console.WriteLine(deck.Cards.Count);
-            //Console.ReadLine();
+            Console.WriteLine("Feel free to look around the casino. Bye for now.");
+            Console.Read();
         }
-
-
     }
 }
