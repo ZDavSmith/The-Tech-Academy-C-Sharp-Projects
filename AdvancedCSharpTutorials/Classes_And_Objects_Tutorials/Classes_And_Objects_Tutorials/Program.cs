@@ -11,9 +11,8 @@ namespace TwentyOne
     {
         static void Main(string[] args)
         {
-            //string text = "Here is some text";
-            //File.WriteAllText(@"C:\Users\Zachary\Logs\log.txt", text);
-            //string text = File.ReadAllText(@"C:\Users\Zachary\Logs\log.txt");
+
+            DateTime dateTime = new DateTime(1955, 5, 23, 8, 32, 45);
 
             Console.WriteLine("Welcome to the Grand Hotel and Casino. Let's start by telling me your name.");
             string playerName = Console.ReadLine();
