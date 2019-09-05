@@ -17,12 +17,15 @@ namespace ExceptionHandlingMoreAdvanced
                     if (userAge > 0)
                     {
                         DateTime pastTime = DateTime.Now.AddYears(-userAge);
+                        DateTime yearTest = new DateTime(1990, 09, 04, 7, 35, 5);
+                        int years = new DateTime(DateTime.Now.Subtract(yearTest).Ticks).Year - 1;
+                        Console.WriteLine(years);
                         Console.WriteLine("You were born {0} years ago in {1}", userAge, pastTime.Year);
                         validAnswer = true;
                     }
                     else
                     {
-                        throw new Exception();
+                        throw new FormatException();
                     }
 
                 }

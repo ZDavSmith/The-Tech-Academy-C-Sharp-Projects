@@ -1,0 +1,11 @@
+﻿@model List<CarQuoteInsurance.Models.CarOwner>
+@{
+    ViewBag.Title = "Success";
+}
+
+@{ 
+    foreach (var carOwner in Model)
+    {
+    <h2>Success Your balance is @carOwner.TotalBalance</h2>
+    }
+ }

@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter</title>
+    @Styles.Render("~/Content/css")
+
+</head>
+<body>
+        @RenderBody() <!-- Where index page is getting rendered, or whatever view is getting passed in from the controller-->
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false) @*This script doesn't need to be loaded on every page*@
+  
+</body>
+</html>
