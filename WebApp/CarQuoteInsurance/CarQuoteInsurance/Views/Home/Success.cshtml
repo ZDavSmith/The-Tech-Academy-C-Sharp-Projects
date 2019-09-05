@@ -1,11 +1,12 @@
-﻿@model List<CarQuoteInsurance.Models.CarOwner>
-@{
+﻿@using CarQuoteInsurance.ViewModels
+
+@{ 
     ViewBag.Title = "Success";
 }
 
 @{ 
-    foreach (var carOwner in Model)
-    {
-    <h2>Success Your balance is @carOwner.TotalBalance</h2>
-    }
- }
+    var data = ViewBag.Message;
+}
+
+<h3> Based on your information, your quote comes out to $@data.PaymentPerMonth per month</h3>
+

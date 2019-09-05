@@ -17,7 +17,8 @@ namespace CarQuoteInsurance.ViewModels
         public string CarModel { get; set; }
         public bool Dui { get; set; }
         public string CoverageType { get; set; }
-
+        public int SpeedingTickets { get; set; }
+        public Nullable<int>PaymentPerMonth { get; set; }
 
     }
 }

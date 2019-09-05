@@ -17,12 +17,12 @@
                 <div class="form-group col-md-12">
                     <input name="EmailAddress" type="email" class="form-control" placeholder="Email Address" />
                 </div>
-                
-                    <h4 class="mb-2"> Date Of Birth: </h4>
-                    <div class="form-group col-md-12">
-                        <input name="DateofBirth" type="date" class="form-control"/>
-                    </div>
-                
+
+                <h4 class="mb-2"> Date Of Birth: </h4>
+                <div class="form-group col-md-12">
+                    <input name="DateofBirth" type="date" class="form-control" />
+                </div>
+
                 <div class="form-group col-md-12">
                     <input name="CarYear" type="text" class="form-control" placeholder="Car Year" />
                 </div>
@@ -33,41 +33,48 @@
                     <input name="CarModel" type="text" class="form-control" placeholder="Car Model" />
                 </div>
                 <!-- DUI CHECK BUTTONS-->
-
-                <div>
-                    <h4 class="mb-2"> Have you ever had a DUI?</h4>
-                    <div class="custom-control custom-radio col-sm-3">
-                        <input type="radio" class="form-check-input" id="DuiYes" name="DuiCheck">
-                        <label class="form-check-label" for="DuiYes">Yes</label>
-                    </div>
-
-                    <div class="custom-control custom-radio mb-4">
-                        <input type="radio" class="form-check-input" id="DuiNo" name="DuiCheck" checked>
-                        <label class="form-check-label" for="DuiNo">No</label>
-                    </div>
+                <div class="form-group col-md-12 mb-0 ">
+                    <h3>Have you ever had a DUI?</h3>
                 </div>
-
-
-                <div class="form-group col-md-12">
-                    <input name="Speeding Tickets" type="number" min="0" class="form-control" placeholder="Number of Speeding Tickets" />
-                </div>
-                <!-- Coverage Check-->
-                <div>
-                    <h4 class="mb-2"> Choose your coverage type:</h4>
-                    <div class="custom-control custom-radio ">
-                        <input type="radio" class="form-check-input" id="FullCoverage" name="Coverage">
-                        <label class="form-check-label" for="FullCoverage">Full Coverage</label>
+                    <div class="btn-group " data-toggle="buttons">
+                        <label class="btn btn-info active">
+                            @Html.RadioButton("Dui", "True", true,
+                                new { id = "IsTrue" }) Yes
+                        </label>
+                        <label class="btn btn-info">
+                            @Html.RadioButton("Dui", "False",
+                                 new { id = "IsFalse" }) No
+                        </label>
                     </div>
 
 
-                    <div class="custom-control custom-radio mb-4">
-                        <input type="radio" class="form-check-input" id="LiabiltyCoverage" name="Coverage" checked>
-                        <label class="form-check-label" for="LiabilityCoverage">Liabilty Coverage</label>
+                    <div class="form-group col-md-12">
+                        <input name="SpeedingTickets" type="number" min="0" class="form-control" placeholder="Number of Speeding Tickets" />
                     </div>
-                </div>
+                    <!-- Coverage Check-->
 
-                <button type="submit" class="btn btn-block btn-info">Submit for Quote</button>
-            </div>
+                    <div class="btn-group" data-toggle="buttons">
+
+                        <label class="btn btn-info active">
+
+                            @Html.RadioButton("CoverageType", "True", true,
+
+                                new { id = "IsTrue" }) Full Coverage
+
+                        </label>
+
+                        <label class="btn btn-info">
+
+                            @Html.RadioButton("CoverageType", "False",
+
+                                 new { id = "IsFalse" }) Liability Coverage
+
+                        </label>
+
+                    </div>
+
+                    <button type="submit" class="btn btn-block btn-info">Submit for Quote</button>
+                </div>
             }
         </div>
     </div>
