@@ -129,6 +129,11 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Migrations\201910021546048_Zach.cs" />
+    <Compile Include="Migrations\201910021546048_Zach.Designer.cs">
+      <DependentUpon>201910021546048_Zach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CarOwner.cs">
       <DependentUpon>CarQuote.tt</DependentUpon>
     </Compile>
@@ -155,10 +160,6 @@
     <Compile Include="ViewModels\GetQuoteVm.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\CarOwner.mdf" />
-    <Content Include="App_Data\CarOwner_log.ldf">
-      <DependentUpon>CarOwner.mdf</DependentUpon>
-    </Content>
     <Content Include="Models\CarQuote.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>CarQuote.edmx</DependentUpon>
@@ -252,7 +253,9 @@
     <Content Include="Views\Home\Success.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
@@ -262,6 +265,11 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201910021546048_Zach.resx">
+      <DependentUpon>201910021546048_Zach.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
