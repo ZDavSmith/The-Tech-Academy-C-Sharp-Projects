@@ -131,7 +131,7 @@ This is a section from the CalendarController which takes a list of schedule ite
     }
     
     
-   ![ScreenShot](/ProsperITImages/CreateNewsItemsCalendar.png)
+   ![ScreenShot](./ProsperITImages/CreateNewsItemsCalendar.png)
 
 
 ## Front End Stories
@@ -187,7 +187,7 @@ When I was first assigned to this project, most of the views for the project had
                 @Html.Partial(AnchorButtonGroupHelper.PartialView, AnchorButtonGroupHelper.GetEditDeleteBack(Model.NewsId.ToString()))
             </p>
 
-![ScreenShot](/ProsperITImages/News.png)
+![ScreenShot](./ProsperITImages/News.png)
 
 
                         /* Default Container Style*/
